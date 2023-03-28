@@ -26,10 +26,10 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Company::factory(10)->create();
-        Team::factory(10)->create();
-        Role::factory(20)->create();
-        Responsibility::factory(20)->create();
-        Employee::factory(20)->create();
+        // Company::factory(10)->create();
+        // Team::factory(10)->create();
+        // Role::factory(20)->create();
+        // Responsibility::factory(20)->create();
+        // Employee::factory(20)->create();
     }
 }
