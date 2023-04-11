@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Employee extends Model
 {
-    use HasFactory,SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'name',
@@ -23,11 +23,13 @@ class Employee extends Model
         'verified_at'
     ];
 
-    public function team(){
+    public function team()
+    {
         return $this->belongsTo(Team::class);
     }
 
-    public function role(){
-        return $this->hasMany(Role::class);
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
     }
 }

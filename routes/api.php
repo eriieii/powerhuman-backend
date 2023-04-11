@@ -46,7 +46,10 @@ Route::prefix('responsibility')->middleware('auth:sanctum')->name('responsibilit
 
 // Employee API
 Route::prefix('employee')->middleware('auth:sanctum')->name('employee.')->group(function () {
+    Route::get('', [EmployeeController::class, 'fetch'])->name('fetch');
     Route::post('', [EmployeeController::class, 'create'])->name('create');
+    Route::post('update/{id}', [EmployeeController::class, 'update'])->name('update');
+    Route::delete('{id}', [EmployeeController::class, 'destroy'])->name('delete');
 });
 // auth API
 Route::name('auth.')->group(function () {
